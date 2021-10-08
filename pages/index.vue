@@ -7,15 +7,15 @@
         {{ error }}
       </h3>
 
-      <div class="form-control" :class="{ 'invalid': !form.email.valid.value }">
+      <div class="form-control" :class="{ 'invalid': !form.email.valid }">
         <label for="email">Email</label>
-        <input id="email" v-model="form.email.value.value" type="email">
+        <input id="email" v-model="form.email.value" type="email">
         <small v-if="form.email.errors.required">Email field is required</small>
       </div>
 
-      <div class="form-control" :class="{ 'invalid': !form.password.valid.value }">
+      <div class="form-control" :class="{ 'invalid': !form.password.valid }">
         <label for="password">Password</label>
-        <input id="password" v-model="form.password.value.value" type="password">
+        <input id="password" v-model="form.password.value" type="password">
         <small v-if="form.password.errors.required">Password field is required</small>
         <small v-else-if="form.password.errors.minLength">
           Password length can't be less then 8. Now it is {{ form.password.value.length }}.
